@@ -1,0 +1,218 @@
+<?php 
+
+// $connection = mysqli_connect('localhost','iotayapt_robo','shaki@robo','iotayapt_robotech');
+// if(isset($_POST['pay'])){
+//   $email = $_POST['email'];
+//   $segment = $_POST['segment'];
+//   $selectRegisterd = "SELECT * FROM NRP WHERE `TLEmail`='$email' AND `segment`='$segment'";
+//   $querySel = mysqli_query($connection,$selectRegisterd);
+//   $findData = mysqli_num_rows($querySel);
+//   if($findData>0){
+//     echo $findData;
+//   }else{ 
+//     echo $findData;
+//   }
+
+// }
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/style.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <header style="height: unset;">
+    <div class="mainTopHead" id="topH">
+      <div class="logoMain">
+        <img src="./assets/images/logo.png" alt="">
+      </div>
+      <div class="menuDiv donotShow">
+        <li><a href="/">Home</a></li>
+        
+      </div>
+      <div class="showMobile">
+        <i onclick="mobileMenu()" class="fas fa-bars" style="font-size: 25px;color:white"></i>
+      </div>
+    </div>
+    
+    
+   
+  </header>
+
+
+
+  <section class="RegisterForm">
+    <form method="POST">
+        <h1>After the Payment. The Registration will be Completed.</h1><br>
+        <div class="partOne">
+            <div class="inputDivWraper">
+                <div class="inputDiv">
+                    <label>Email: <span class="requirdStar">*</span></label><br>
+                    <p style="font-size:12px">(Team Leader's Email)</p>
+                    <input id="teamName" type="email" name="email" placeholder="jomh@gmail.com">
+                    
+                </div>
+            </div>
+            <div class="inputDivWraper">
+                <div class="inputDiv">
+                    <label>For Segment: <span class="requirdStar">*</span></label><br>
+                    <select style='width:100%; padding:10px' name="segment">
+                      <option selected disabled>Select Segment</option>
+                      <option value="Robo">Robo Soccer</option>
+                      <option value="Line">Line Following</option>
+                      <option value="Showcase">Project Showcase Senior</option>
+                      <option value="ProjectJ">Project Junior</option>
+                      <option value="PosterS">Poster Senior</option>
+                      <option value="PosterJ">Poster Junior</option>
+                    </select>
+                    
+                </div>
+            </div>
+            <div class="inputDivWraper">
+                <div class="inputDiv">
+                    <label>Account Phone Number: <span class="requirdStar">*</span></label><br>
+                    <input id="teamName" type="text" name="Phone" placeholder="01xxx-xxxxxx">
+                    
+                </div>
+            </div>
+            <div class="inputDivWraper">
+                <div class="inputDiv">
+                    <label>Trnx ID:<span class="requirdStar">*</span></label><br>
+                    <input type="text" name="trxid" id="InstituteName" placeholder="D4g4w4t4ex">
+                </div>
+            </div>
+            <div class="inputDivWraper">
+                <div class="inputDiv checkInput">
+                    <label>Select Payment Method:<span class="requirdStar">*</span></label><br>
+                    
+                    <input checked onclick="getPayV(this)" type="radio" value="Bkash" name="payment" id="segment"> Bkash <br>
+                    <input onclick="getPayV(this)" type="radio" value="Nagad" id="payment" name="payment"> Nagad <br>
+                    <input onclick="getPayV(this)" type="radio" value="Rocket" id="payment" name="payment"> Rocket <br>
+                   
+                </div>
+            </div>
+            <br>
+            <div id="Instarction" style="background-color:rgba(128, 128, 128, 0.262);padding:40px;display:flex">
+                <div>
+                    <h3 id="acc" style="color: green;">Bkash: 01xxx-xxxxxx</h3><br>
+                    <h4>Proccess:</h4>
+                    <ol>
+                        <li id="taka">Fee</li>
+                        <li>Send Money to the Number given </li>
+                        <li>Check Sendmoney Success message on your phone. </li>
+                        <li>Pick the trx ID from your message and put on the TrxId Field </li>
+                        <li>Click on Done</li>
+                        <li>Wait some moments. Your Registration & Payment Proccess will be Completed</li>
+                    </ol>
+                </div>
+                <div style="padding: 20px ;">
+                1.	Robo Soccer registration fees – 2000 BDT<br>
+2.	Line following – 2000 BDT<br>
+3.	Project showcase senior – 2000 BDT<br>
+4.	Project junior – 1500 BDT<br>
+5.	Poster senior – 1500 BDT<br>
+6.	Poster junior – 1000 BDT<br>
+                </div>
+
+            </div>
+        
+            <br><br>
+            <div class="submitSec">
+                <input style="padding: 10px 30px;background-color:rgb(3, 163, 3);border: 1px solid grey;" type="submit" name="pay" value="Done">
+            </div>
+        </div>
+
+
+        <!-- finish Part -->
+
+
+    </form>
+  </section>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+<footer>
+    <p> &copy; 2022 by Robo Tech Valley Ltd.</p>
+  </footer>
+  
+  
+  <script>
+
+  
+    var acc = document.getElementById('acc');
+    var taka = document.getElementById('taka');
+    var old = 'Bkash';
+    function getPayV(v){
+        
+        
+        if(old='Bkash'){
+            acc.innerHTML=v.value+': 0103899384';
+        }if(old='Nagad'){
+            acc.innerHTML=v.value+': 0103899382';
+        }if(old='Rocket'){
+            acc.innerHTML=v.value+': 0103899383';
+        }
+        old=v.value
+
+    }
+
+
+    window.onscroll=()=>{
+      if(window.scrollY>100){
+        document.getElementById('topH').classList.add('sticky');
+      }else{
+        document.getElementById('topH').classList.remove('sticky');
+      }
+    }
+    function mobileMenu(){
+      document.querySelector('.menuDiv').classList.toggle('donotShow');
+    }
+    var oldSeg = 'Robo';
+    function getSeg(v){
+      if(v.value==='Robo'){
+        taka.innerHTML='Registration Fee: 2000 BDT';
+      }
+      if(v.value==='Line'){
+        taka.innerHTML='Registration Fee: 2000 BDT';
+      }
+      if(v.value==='Showcase'){
+        taka.innerHTML='Registration Fee: 2000 BDT';
+      }
+      if(v.value==='ProjectJ'){
+        taka.innerHTML='Registration Fee: 1500 BDT';
+      }
+      if(v.value==='PosterS'){
+        taka.innerHTML='Registration Fee: 1500 BDT';
+      }
+      if(v.value==='PosterJ'){
+        taka.innerHTML='Registration Fee: 1000 BDT';
+      }
+      oldSeg = v.value;
+    }
+
+
+
+
+
+
+  </script>
+  
+  
+  
+  </body>
+  </html>

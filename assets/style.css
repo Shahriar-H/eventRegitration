@@ -1,0 +1,342 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #054d95;
+    box-shadow: 4px 0px 8px 2px rgba(104, 104, 104, 0.648);
+    z-index:999999;
+  }
+
+.bodyMarg{
+    padding:100px 250px 100px 250px;
+}
+header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(6, 88, 166, 0.866),rgba(5, 80, 151, 0.921)),url('./images/mainBody.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainTopHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px 0px 100px;
+}
+.menuDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.mainBody{
+    padding-top: 200px;
+}
+
+.menuDiv li a{
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Oxygen', sans-serif;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+.menuDiv li{
+    list-style-type: none;
+}
+.logoDiv img{
+    max-width: 100%;
+}
+.logoDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.logoDiv a{
+    padding: 15px 30px;
+    border: 1px solid white;
+    transition: 0.4s linear;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+}
+.logoDiv a:hover{
+    background-color: black;
+    
+}
+.logoMain img{
+    max-width: 120px;
+}
+.Registar{
+    position: relative;
+}
+.Registar::before{
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: AnimateBlok 1s linear infinite;
+    -webkit-animation: AnimateBlok 1s linear infinite;
+}
+
+.Registar::after{
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+.chav,.chav2 {
+    position: relative;
+}
+.chav svg{
+    position: absolute;
+    animation: cavAnim 2s linear infinite;
+    -webkit-animation: cavAnim 2s linear infinite;
+    color: white;
+    font-size: 20px;
+}
+.chav2 svg{
+    position: absolute;
+    animation: cavAnim2 2s linear infinite;
+    -webkit-animation: cavAnim2 2s linear infinite;
+    color: white;
+    font-size: 20px;
+}
+
+@keyframes cavAnim {
+    to{
+        top:20px
+    }
+    from{
+        top:0px
+    }
+}
+@keyframes cavAnim2 {
+    to{
+        top:30px;
+        opacity: 0.1;
+    }
+    from{
+        top:0px;
+        opacity: 1;
+    }
+}
+.detailDiv h1{
+    font-size: 40px;
+    color: rgb(2, 70, 172);
+}
+.detailDiv ul{
+    padding-left: 40px;
+}
+.prices{
+    background-color: #054d95;
+    padding: 100px;
+}
+.headTag{
+    text-align: center;
+
+}
+.headTag h1{
+    color: white;
+    text-transform: uppercase;
+}
+.headTag p{
+    color: white;
+}
+.priceMoneyDiv{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.moneyDi{
+    background-color: white;
+    padding: 40px;
+    width: 49%;
+    margin: 6px;
+
+}
+.registerSec{
+    padding:50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.681),rgba(0, 0, 0, 0.692)),url('./images/reg.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.registerDiv{
+    display: flex;
+    justify-content: center;
+}
+.registerDiv .logoDiv{
+    margin: 7px;
+}
+.registerDiv .Registar:hover{
+    background-color: #054d95;
+}
+
+.organiger{
+    padding:100px;
+}
+.organiger .headTag h1{
+    color: #054d95;
+}
+
+.organizerLogo{
+    display: flex;
+    justify-content: space-around;
+}
+.contact .logoDiv a {
+    border: 1px solid black;
+    color: black;
+}
+.contact .logoDiv a:hover {
+    border: 1px solid black;
+    color: white
+}
+footer{
+    background-color: black;
+    padding: 5px;
+}
+footer p{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+/* RegisterForm */
+
+.RegisterForm{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+}
+.RegisterForm form{
+    width: 80%;
+}
+.inputDivWraper{
+    margin-bottom: 10px;
+}
+
+.inputDiv input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+.checkInput input{
+    width: unset;
+}
+.submitSec{
+    display: flex;
+}
+.submitSec p{
+    background-color: #054d95;
+    color: white;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: fit-content;
+    margin: 5px;
+}
+.dnone{
+    display: none;
+}
+.requirdStar{
+    color: red;
+}
+
+.showMobile{
+    display: none;
+}
+
+
+@media only screen and (min-width:200px) and (max-width:992px) {
+    .mainTopHead {
+        padding: 4px 10px 4px 10px;
+    }
+    .menuDiv {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        background-color: white;
+        width: 100%;
+    }
+    .menuDiv li {
+        padding: 10px;
+    }
+    .menuDiv li a {
+        color: black;
+        
+    }
+    .donotShow{
+        display: none !important;
+    }
+    .showMobile{
+        display: block;
+    }
+    .mainBody {
+        padding-top: 185px;
+    }
+    section{
+        padding: 100px 25px 100px 25px !important;
+    }
+    .moneyDi {
+        width: 100%;
+    }
+    .registerDiv {
+        display: block;
+        margin-bottom: 100px;
+    }
+    .registerDiv .logoDiv a{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .organizerLogo {
+        display: block;
+        text-align: center;
+        
+    }
+      .organizerLogo img{
+        margin-bottom: 40px;
+    }
+      .RegisterForm form {
+        width: 95%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

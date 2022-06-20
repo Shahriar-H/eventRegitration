@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/style.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <header style="height: unset;">
+    <div class="mainTopHead" id="topH">
+      <div class="logoMain">
+        <img src="./assets/images/logo.png" alt="">
+      </div>
+      <div class="menuDiv donotShow">
+        <li><a href="/">Home</a></li>
+        
+      </div>
+      <div class="showMobile">
+        <i onclick="mobileMenu()" class="fas fa-bars" style="font-size: 25px;color:white"></i>
+      </div>
+    </div>
+    
+    
+   
+  </header>
+
+
+
+  <section class="RegisterForm">
+    <form action="">
+        <div class="partOne">
+            <div class="inputDivWraper">
+                <div class="inputDiv">
+                    <label>Team name: <span class="requirdStar">*</span></label><br>
+                    <input id="teamName" type="text" name="teamName" placeholder="Enter your Team name">
+                    
+                </div>
+            </div>
+            <div class="inputDivWraper">
+                <div class="inputDiv">
+                    <label>Institute name<span class="requirdStar">*</span></label><br>
+                    <input type="text" name="InstituteName" id="InstituteName" placeholder="School/College/University">
+                </div>
+            </div>
+            <div class="inputDivWraper">
+                <div class="inputDiv checkInput">
+                    <label>Select Competition Segment:<span class="requirdStar">*</span></label><br>
+                    
+                    <input checked type="radio" value="robo" name="segment" id="segment"> Robo Soccer <br>
+                    <input type="radio" value="Line" id="segment" name="segment"> Line Following <br>
+                    <input type="radio" value="ShowcaseS" id="segment" name="segment"> Project Showcase Senior <br>
+                    <input type="radio" value="ProjectJ" id="segment" name="segment"> Project Junior <br>
+                    <input type="radio" value="PosterS" id="segment" name="segment"> Poster Senior <br>
+                    <input type="radio" value="PosterJ" id="segment" name="segment"> Poster Junior <br>
+                </div>
+            </div>
+        
+            <br><br>
+            <div class="submitSec">
+                
+                <p onclick="nextSecond()">NEXT</p>
+            </div>
+        </div>
+
+
+
+<!-- partsecond -->
+        <div class="partTwo dnone">
+            <div class="inputDivWraper">
+                <div class="inputDiv">
+                    <label>Team Leader Full name<span class="requirdStar">*</span></label><br>
+                    <input type="text" id="TLName" name="TLName" placeholder="Full Name">
+                </div>
+            </div>
+            <div class="inputDivWraper">
+                <div class="inputDiv">
+                    <label>Email<span class="requirdStar">*</span></label><br>
+                    <input type="email" id="TLEmail" name="TLEmail" placeholder="jonh@gmail.com">
+                </div>
+            </div>
+            <div class="inputDivWraper">
+                <div class="inputDiv">
+                    <label>Contact No<span class="requirdStar">*</span></label><br>
+                    <input type="number" id="TLPhone" name="TLPhone" placeholder="01xxx-xxxxxx">
+                </div>
+            </div>
+        
+            <br><br>
+            <div class="submitSec">
+                <p onclick="prevSecond()">PREV</p>
+                <p onclick="nextThird()">NEXT</p>
+            </div>
+        </div>
+
+<!-- Third Part -->
+        <div class="partThree dnone">
+            
+            
+            <div id="M2">
+                <h3>Member 2</h3>
+                <hr><br>
+                <div class="inputDivWraper">
+                    <div class="inputDiv">
+                        <label>Team Member Full name:</label><br>
+                        <input type="text" id="M2Name" name="M2Name" placeholder="Full Name">
+                    </div>
+                </div>
+                <div class="inputDivWraper">
+                    <div class="inputDiv">
+                        <label>Email</label><br>
+                        <input type="email" id="M2Email" name="M2Email" placeholder="jonh@gmail.com">
+                    </div>
+                </div>
+                <div class="inputDivWraper">
+                    <div class="inputDiv">
+                        <label>Contact No</label><br>
+                        <input type="number" id="M2Phone" name="M2Phone" placeholder="01xxx-xxxxxx">
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            
+            <div id="M3">
+                <h3>Member 3</h3>
+                <hr><br>
+                <div class="inputDivWraper">
+                    <div class="inputDiv">
+                        <label>Team Member Full name:</label><br>
+                        <input type="text" id="M3Name" name="M3Name" placeholder="Full Name">
+                    </div>
+                </div>
+                <div class="inputDivWraper">
+                    <div class="inputDiv">
+                        <label>Email</label><br>
+                        <input type="email" id="M3Email" name="M3Email" placeholder="jonh@gmail.com">
+                    </div>
+                </div>
+                <div class="inputDivWraper">
+                    <div class="inputDiv">
+                        <label>Contact No</label><br>
+                        <input type="number" id="M3Phone" name="M3Phone" placeholder="01xxx-xxxxxx">
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            
+            <div id="M4">
+                <h3>Member 4</h3>
+                <hr><br>
+                <div class="inputDivWraper">
+                    <div class="inputDiv">
+                        <label>Team Member Full name:</label><br>
+                        <input type="text" id="M4Name" name="M4Name" placeholder="Full Name">
+                    </div>
+                </div>
+                <div class="inputDivWraper">
+                    <div class="inputDiv">
+                        <label>Email</label><br>
+                        <input type="email" id="M4Email" name="M4Email" placeholder="jonh@gmail.com">
+                    </div>
+                </div>
+                <div class="inputDivWraper">
+                    <div class="inputDiv">
+                        <label>Contact No</label><br>
+                        <input type="number" id="M4Phone" name="M4Phone" placeholder="01xxx-xxxxxx">
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            <div class="submitSec">
+                <p onclick="prevThird()">PREV</p>
+                <p onclick="FinishNext()">SUBMIT</p>
+            </div>
+        </div>
+
+        <!-- finish Part -->
+
+
+    </form>
+  </section>
+<p id="keep">here</p>
+  <script>
+    var teamName='';
+    var InstituteName='';
+    var segment='';
+
+    var TLName = '';
+    var TLEmail = '';
+    var TLPhone = '';
+
+    var M2Name = '';
+    var M2Email = '';
+    var M2Phone = '';
+
+    var M3Name = '';
+    var M3Email = '';
+    var M3Phone = '';
+
+    var M4Name = '';
+    var M4Email = '';
+    var M4Phone = '';
+
+    function nextSecond(){
+       //console.log(document.querySelector('#teamName').value)
+       
+       if(document.querySelector('#teamName').value!=''){
+        if(document.querySelector('#InstituteName').value!=''){
+            teamName=document.querySelector('#teamName').value;
+            InstituteName = document.querySelector('#InstituteName').value;
+            segment = document.querySelector('input[name="segment"]:checked').value;
+            var part1 = document.querySelector('.partOne');
+            var part2 = document.querySelector('.partTwo');
+            part1.classList.add('dnone');
+            part2.classList.remove('dnone');
+        }else{
+            alert('Institute Field is empty');
+        }
+       }else{
+        alert('Team Field is empty');
+       }
+        
+    }
+    
+    function prevSecond(){
+        var part1 = document.querySelector('.partOne');
+        var part2 = document.querySelector('.partTwo');
+        part1.classList.remove('dnone');
+        part2.classList.add('dnone');
+    }
+
+    function nextThird(){
+        if(TLName=document.querySelector('#TLName').value!=''){
+            if(TLEmail=document.querySelector('#TLEmail').value!=''){
+                if(TLPhone=document.querySelector('#TLPhone').value!=''){
+                    if(segment=='ProjectJ'||segment=='PosterS'){
+                        document.getElementById('M2').style.display='block';
+                        document.getElementById('M3').style.display='block';
+                        document.getElementById('M4').style.display='none';
+                    }else if(segment=='PosterJ'){
+                        document.getElementById('M4').style.display='none';
+                        document.getElementById('M3').style.display='none';
+                    }else{
+                        document.getElementById('M2').style.display='block';
+                        document.getElementById('M3').style.display='block';
+                        document.getElementById('M4').style.display='block';
+                    }
+                    TLName=document.querySelector('#TLName').value;
+                    TLEmail=document.querySelector('#TLEmail').value;
+                    TLPhone=document.querySelector('#TLPhone').value;
+                    var part3 = document.querySelector('.partThree');
+                    var part2 = document.querySelector('.partTwo');
+                    part2.classList.add('dnone');
+                    part3.classList.remove('dnone');
+                }else{
+                    alert('Team Leader Contact Field is empty');
+                }
+            }else{
+                alert('Team Leader Email Field is empty');
+            }
+        }else{
+            alert('Team Leader Name Field is empty');
+        }
+        
+    }
+    function prevThird(){
+        var part3 = document.querySelector('.partThree');
+        var part2 = document.querySelector('.partTwo');
+        part2.classList.remove('dnone');
+        part3.classList.add('dnone');
+    }
+    function FinishNext(){
+        M2Name=document.querySelector('#M2Name').value;
+        M2Email=document.querySelector('#M2Email').value;
+        M2Phone=document.querySelector('#M2Phone').value;
+
+        M3Name=document.querySelector('#M3Name').value;
+        M3Email=document.querySelector('#M3Email').value;
+        M3Phone=document.querySelector('#M3Phone').value;
+
+        M4Name=document.querySelector('#M4Name').value;
+        M4Email=document.querySelector('#M4Email').value;
+        M4Phone=document.querySelector('#M4Phone').value;
+
+        var xht = new XMLHttpRequest();
+        xht.open("GET",'./submit.php?teamName='+teamName+'&InstituteName='+InstituteName+'&segment='+segment+'&TLName='+TLName+'&TLPhone='+TLPhone+'&TLEmail='+TLEmail+'&M2Name='+M2Name+'&M2Email='+M2Email+'&M2Phone='+M2Phone+'&M3Name='+M3Name+'&M3Email='+M3Email+'&M3Phone='+M3Phone+'&M4Name='+M4Name+'&M4Email='+M4Email+'&M4Phone='+M4Phone,true);
+        xht.send();
+        xht.onreadystatechange = function(){
+            if(xht.readyState==4 && xht.status==200){
+                var data = xht.response;
+                console.log(data);
+                document.getElementById('keep').innerHTML=data;
+            }
+        }
+    }
+  </script>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+<footer>
+    <p> &copy; 2022 by Robo Tech Valley Ltd.</p>
+  </footer>
+  
+  
+  <script>
+    window.onscroll=()=>{
+      if(window.scrollY>100){
+        document.getElementById('topH').classList.add('sticky');
+      }else{
+        document.getElementById('topH').classList.remove('sticky');
+      }
+    }
+    function mobileMenu(){
+      document.querySelector('.menuDiv').classList.toggle('donotShow');
+    }
+  </script>
+  
+  
+  
+  </body>
+  </html>
